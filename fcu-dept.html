@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>逢甲大學</title>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+        alert($("#list1 option:selected").index());
+        });
+       $("#list1").change(function() {
+          $selIndex = $("#list1 option:selected").index();
+          if( $selIndex == 0)  {
+            $("#list2").html("<option> 會計學系 </option>  <option> 財稅學系 </option>  <option> 行銷系 </option>");
+          }
+          if( $selIndex == 1)  {
+            $("#list2").html("<option> 化學工程學系 </option>,<option> 機械與電腦輔助工程學系</option> <option> 纖維與複合材料學系</option>");
+          }
+          if( $selIndex == 2)  {
+            $("#list2").html("<option> 資訊工程學系 </option>  <option>電機工程學系 </option>  <option> 電子工程學系 </option>");
+          }
+          if( $selIndex == 3)  {
+            $("#list2").html("<option> 光電學系 </option>  <option>應用數學系 </option>  <option> 環境工程與科學學系 </option>");
+          }
+          if( $selIndex == 4)  {
+            $("#list2").html("<option> 風險管理與保險學系 </option>  <option> 財務金融學系 </option>  <option> 財務工程與精算學士學位學程 </option>");
+          }
+          if( $selIndex == 5)  {
+            $("#list2").html("<option> 中國文學系 </option>  <option> 外國語文學系 </option>  <option> 歷史與文物研究所 </option>");
+          }
+      });
+    });
+    </script>
+
+  </head>
+  <body>
+
+    <h2>請選擇學院</h2>
+    <select id="list1">
+      <option> 商學院 </option>
+      <option> 工學院 </option>
+      <option> 資電學院 </option>
+      <option> 理學院 </option>
+      <option> 金融學院 </option>
+      <option> 人文社會學院 </option>
+    </select>
+
+    <h2>當你選擇學院後，下列選單會列出該學院的所有科系</h2>
+    <select id="list2">
+      <option> 會計學系 </option>
+      <option> 財稅學系 </option>
+      <option> 行銷系 </option>
+    </select>
+
+
+
+  </body>
+</html>
